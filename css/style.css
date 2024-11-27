@@ -1,0 +1,95 @@
+body {
+     animation: fadeOut 0.666s ease-in-out;
+     font-family: 'Roboto', sans-serif;
+     scroll-behavior: smooth;
+     transition: background-color 0.5s, color 0.5s;
+}
+ .fade-in {
+     animation: fadeIn 2s ease-in-out;
+}
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+    }
+     to {
+         opacity: 1;
+    }
+}
+ @keyframes fadeOut {
+     from {
+         opacity: 0;
+    }
+     to {
+         opacity: 1;
+    }
+}
+ .slide-up {
+     animation: slideUp 1s ease-in-out;
+}
+ @keyframes slideUp {
+     from {
+         transform: translateY(20px);
+         opacity: 0;
+    }
+     to {
+         transform: translateY(0);
+         opacity: 1;
+    }
+}
+ .mobile-menu {
+     transition: max-height 0.3s ease-in-out;
+     overflow: hidden;
+     max-height: 0;
+     text-align: center;
+}
+ .mobile-menu.open {
+     max-height: 500px;
+    /* Adjust as needed */
+}
+ .dark-mode {
+     background-color: #1a202c;
+     color: #cbd5e0;
+     animation: fadeIn 0.614514s ease-in-out;
+}
+ .dark-mode .bg-white {
+     background-color: #2d3748;
+}
+ .dark-mode .text-gray-800 {
+     color: #cbd5e0;
+}
+ .dark-mode .text-gray-600 {
+     color: #a0aec0;
+}
+ .dark-mode .bg-gray-100 {
+     background-color: #4a5568;
+}
+ .dark-mode .bg-gray-100 .text-gray-800 {
+     color: #cbd5e0;
+}
+ .dark-mode .bg-gray-100 .text-gray-600 {
+     color: #a0aec0;
+}
+ .button {
+     display: inline-block;
+     padding: 10px 20px;
+     background-color: #3498db;
+     color: white;
+     font-size: 16px;
+     text-decoration: none;
+     border-radius: 5px;
+     position: relative;
+     overflow: hidden;
+}
+ .button::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(255, 255, 255, 0.3);
+     transition: left 0.3s;
+}
+ .button:hover::before {
+     left: 0;
+}
